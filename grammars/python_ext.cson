@@ -28,6 +28,12 @@
         ]
         'name': 'docstring.python'
     }
+    {
+        'match': '(\\s+)\\Z'
+        'captures':
+            '1':
+                'name': 'trailing.whitespace.python'
+    }
 
     {
         'include': 'source.python'
