@@ -1,0 +1,22 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/stylesheets/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+@import "syntax-variables";
+
+.docstring.python {
+    color: @cyan;
+    .summary, .args, .return{
+        font-weight: bold;
+    }
+}
+
+// Stop comments from being italic!!!!!!
+.comment.line.number-sign.python, .punctuation.definition.comment.python {
+    font-style: normal;
+}
+
+.comment {
+    font-style: normal !important;
+}

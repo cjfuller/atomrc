@@ -1,0 +1,35 @@
+'scopeName': 'source.pythonextensions'
+'name': 'Python - Extended'
+'fileTypes': [
+    'py'
+]
+'patterns':[
+    {
+        'begin': '^\\s*(?=[uU]?[rR]?""")'
+        'end': '(?<=""")'
+        'patterns': [
+            {
+                'match': '"""((?:.(?!"""))*.(?="""|\\Z))'
+                'captures':
+                    '1':
+                        'name': 'summary.docstring.python'
+            }
+            {
+                'match': 'Args:'
+                'name': 'args.docstring.python'
+            }
+            {
+                'match': '(?:Return:|Returns:)'
+                'name': 'return.docstring.python'
+            }
+            {
+                'include': '#string_quoted_double'
+            }
+        ]
+        'name': 'docstring.python'
+    }
+
+    {
+        'include': 'source.python'
+    }
+]

@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Enable atomrc': 'atomrc:toggle'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'atomrc'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'atomrc:toggle' }
+      ]
+    ]
+  }
+]
